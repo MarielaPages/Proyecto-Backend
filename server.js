@@ -16,8 +16,8 @@ const dreams = [
 app.use(express.static("public"));
 
 // https://expressjs.com/en/starter/basic-routing.html
-app.get("/", (request, response) => {
-  response.sendFile(__dirname + "/views/index.html");
+app.get("/productos", (request, response) => {
+  response.send(``);
 });
 
 // send the default array of dreams to the webpage
