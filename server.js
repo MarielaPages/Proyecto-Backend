@@ -7,14 +7,14 @@ const Contenedor = require('./PagesMarielaDesafio4.js')
 
 const archivoNuevo = new Contenedor('productos.txt');
 
-app.get("/productos", (request, response) => {
-  response.send(``);
+app.get("/productos", async (request, response) => {
+  let products = await archivoNuevo.getAll();
+  response.send(`products`);
 });
 
-// send the default array of dreams to the webpage
-app.get("/dreams", (request, response) => {
-  // express helps us take JS objects and send them as JSON
-  response.json(dreams);
+app.get("/productoRandom", async (request, response) => {
+  let products = await archivoNuevo.getAll();
+  response.send(`products`);
 });
 
 // listen for requests 

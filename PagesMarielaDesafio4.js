@@ -55,7 +55,7 @@ class Contenedor{
         try{
             const contenido = await fs.promises.readFile(`./${this.file}`, 'utf-8');
             const arrayProductos = JSON.parse(contenido);
-            console.log(arrayProductos);
+            return arrayProductos;
         }
         catch(err){
             console.log("getAll error",err);
