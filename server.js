@@ -25,6 +25,7 @@ app.get("/productoRandom", async (request, response) => {
 });
 
 // listen for requests
-const listener = app.listen(process.env.PORT, () => {
-  console.log("Your app is listening on port " + listener.address().port);
+const PORT = 8080;
+app.listen(PORT, () => {
+  console.log(`Your app is listening on port ${PORT}`);
 });
