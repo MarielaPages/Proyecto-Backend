@@ -7,9 +7,14 @@ const Contenedor = require("./PagesMarielaDesafio4.js");
 
 const archivoNuevo = new Contenedor("productos.txt");
 
+app.get("/", (request, response) => {
+  response.send(`Hola`);
+});
+
 app.get("/productos", async (request, response) => {
   let products = await archivoNuevo.getAll();
-  response.send(`products`);
+  let arrayProducts = JSON.stringify(products);
+  response.send(`${arrayProducts}`);
 });
 
 app.get("/productoRandom", async (request, response) => {
@@ -21,7 +26,7 @@ app.get("/productoRandom", async (request, response) => {
       randomProduct = product;
     }
   });
-  response.send(`randomProduct`);
+  response.send(`${randomProduct}`);
 });
 
 // listen for requests
