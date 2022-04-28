@@ -1,4 +1,4 @@
-const Contenedor = require()
+const Contenedor = require('./PagesMarielaDesafio4.js')
 
 const archivoNuevo = new Contenedor('productos.txt');
 
