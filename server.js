@@ -14,7 +14,9 @@ app.get("/productos", async (request, response) => {
 
 app.get("/productoRandom", async (request, response) => {
   let products = await archivoNuevo.getAll();
-  response.send(`products`);
+  let productRandomId = Math.floor(Math.random()*products.length)+1
+  let randomProduct = 
+  response.send(``);
 });
 
 // listen for requests 
